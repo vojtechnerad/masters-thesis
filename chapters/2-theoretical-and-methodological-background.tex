@@ -1,0 +1,93 @@
+\chapter{Teoreticko-metodologická východiska}
+Tato kapitola poskytuje teoretický a metodologický rámec nezbytný pro analýzu a redesign uživatelského rozhraní aplikace. Jejím cílem je představit základní pojmy, principy a trendy v oblasti workplace management software, UX a UI designu, design systémů a evaluace použitelnosti. Součástí kapitoly je rovněž přehled metod a nástrojů, které slouží k identifikaci problémů současného rozhraní a k návrhu optimálního, uživatelsky přívětivého řešení. Teoretická východiska poskytují nezbytný kontext pro praktickou část práce a umožňují aplikovat osvědčené postupy při systematickém redesignu aplikace.
+
+\section{Workplace management software}
+% Tuto podkapitolu jsem pro toto zadání přeskočil, ale ve finální diplomové práci jí chci mít přibližně na tomto místě.
+
+\section{UX a UI design}
+V oblasti digitálních produktů se pojmy UX (User Experience/Uživatelský zážitek) design a UI (User Interface/Uživatelské rozhraní) design stal klíčovým pro vytváření efektivních a intuitivních rozhraní. UX design je disciplína zaměřující se na řízení celkové zkušenost uživatele při používání nějaké aplikace. UI design je disciplína zaměřující se na vizuální stránku prvků rozhraní.
+
+\subsection{Principy UX designu}
+Hlavním cílem UX designu je zajistit, aby uživatelé mohli efektivně, intuitivně a bez zbytečné mentální námahy dosáhnout svých cílů. Podle Dona Normana (Norman, 2013) lze klíčové pricipy UX designu shrnout následovně
+\begin{itemize}
+    \item Orientace na uživatele (user-centered design) – návrh je založen na potřebách uživatelů
+    \item Použitelnost (usability) – ovládání produktu má být snadno naučitelné a jednoduché na používání
+    \item Předvídatelnost – prvky a interakce napříč aplikací musí mít jednotný vzhled a chování
+    \item Viditelná zpětná vazba – informování uživatele o provedené změně, úspěchu či chybě
+    \item Minimalizace kognitivní zátěže – rozhraní by mělo být přehledné, intuitivní a logicky strukturované
+\end{itemize}
+
+
+\subsection{Principy UI designu}
+UI design se zaměřuje na vizuální a interakční stránku rozhraní.
+\begin{itemize}
+    \item Jasná vizuální hierarchie – klíčové prvky jsou zvýrazněny a vedou uživatele logickým způsobem
+    \item Konzistence a standardizace – opakující se prvky mají stejný vzhled a stejné chování
+    \item Minimalismus a jednoduchost – odstranit nepotřebné prvky, aby rozhraní bylo přehledné
+    \item Interakční zpětná vazba – animace, změny barev nebo stavů indikují, že systém reaguje na akce uživatele
+\end{itemize}
+UI design v praxi úzce souvisí s UX, protože vizuální a interakční prvky ovlivňují, jak snadno a příjemně uživatelé dosahují svých cílů. (Dannaway, 2024)
+
+\subsection{Heuristické zásady}
+Heuristická evaluace představuje expertní metodu posuzování rozhraní podle osvědčených principů použitelnosti. Jacob Nielsen (1994) definoval deset základních heuristik, které se často používají při hodnocení a redesignu komplexních aplikací.
+\begin{enumerate}
+    \item Viditelnost stavu systému
+    \item Shoda mezi systémem a reálným světem
+    \item Uživatelská kontrola a svoboda
+    \item Konzistence a standardy
+    \item Prevence chyb
+    \item Rozpoznání místo vybavování
+    \item Flexibilita a efektivita použití
+    \item Estetický a minimalistický design
+    \item Pomoc při chybách
+    \item Nápověda a dokumentace
+\end{enumerate}
+Použití heuristických principů je při redesignu stávajících modulů aplikace zásadní pro odhalení nekonzistentních prvků, problémové navigace a oblastí s vysokou kognitivní zátěží.
+
+\section{Design systémy}
+Design systémy představují v současnosti jeden z nejdůležitějších nástrojů při návrhu a vývoji digitálních produktů. Reagují na potřebu dlouhodobé konzistence, škálovatelnosti a efektivní spolupráce mezi designéry a vývojáři, zejména v případech rozsáhlých nebo dynamicky se rozvíjejících aplikací. V situaci, kdy produkty obsahují desítky až stovky obrazovek či modulů, se design systém stává klíčovým prvkem umožňujícím udržet jednotnou vizuální a interakční logiku. (Kholmatova, 2017)
+
+\subsection{Definice a účel design systému}
+Podle Ally Kholmatové neexistuje žádná jednotná, univerzálně přijímaná definice design systému. V knize Design Systems definuje design systém jako soubor vzájemně propojených vzorů a sdílených postupů, které jsou koherentně uspořádány za účelem podpory digitálních produktů.
+Vzory jsou opakující se prvky, které kombinujeme při tvorbě rozhraní. Jde například o uživatelské toky, interakce, tlačítka, formulářová pole, ikony, barvy, typografie nebo microcopy (krátké texty).
+Postupy pak znamenají to, jakým způsobem budeme tyto vzory vytvářet, zaznamenávat, sdílet, a používat. Zejména při týmové spolupráci. (Kholmatova, 2017)
+Design systém podle zmíněné definice spojuje tři základní roviny
+\begin{itemize}
+    \item Vizuální prvky – definice estetické podoby zobrazení
+    \item Komponentový systém – katalog prvků určených k opakovanému použití
+    \item Pravidla a procesy – metodika, jak se jednotlivé prvky používají, kombinují a rozvíjejí
+\end{itemize}
+Primárním účelem design systému je vytvořit jednotnou a konzistentní uživatelskou zkušenost napříč aplikací, modulární strukturu podporující efektivní vývoj a snížení chybovosti způsobené nesourodostí stylů či komponent.
+
+\subsection{Principy design systémů}
+Jedním z nejrozšířenějších přístupů k tvorbě design systémů je Atomic Design, který představil Brad Frost (2016). Tento model dělí uživatelské rozhraní do pěti úrovní
+\begin{enumerate}
+    \item Atomy – základní prvky jako barvy, typografické styly, ikony či jednoduché UI prvky
+    \item Molekuly – kombinace atomů (např. input + ikona)
+    \item Organismy – větší komponenty (např. hlavička stránky)
+    \item Šablony – strukturální kostra obrazovek
+    \item Stránky – konkrétní realizace šablon s reálným obsahem
+\end{enumerate}
+Tento přístup usnadňuje škálování designu, protože změna na nízké úrovni (např. úprava barevného tokenu) se může automaticky promítnout v celém systému.
+
+\subsection{Přínosy design systémů}
+Podle studií společnosti Sparkbox, která prováděla průzkumy Design Systems Survey každý rok mezi lety 2018 až 2022, dokáže organizace s funkčním design systémem zkrátit čas tvorby obrazovek až o 50 %. Další výhody zahrnují
+\begin{itemize}
+    \item Rychlejší vývoj – vývojáři opakovaně používají již schválené komponenty místo vytváření nových
+    \item Snížení technického dluhu – díky jednotné knihovně komponent se eliminuje nekonzistence a potřeba předělávek
+    \item Lepší komunikace v týmu – designéři, vývojáři a produktoví manažeři pracují se stejným pojmovým rámcem
+    \item Snazší onboarding nových členů – noví designéři a vývojáři se rychleji orientují ve vizuálním jazyce produktu
+    \item Vyšší kvalita UX – repetitivní používání testovaných komponent vede k menší chybovosti uživatelů a vyšší spokojenosti (Sparkbox, n. r.)
+\end{itemize}
+    
+
+% \subsection{Design systém}
+% Software musí splňovat vyšší nároky na profesionální vizuální identitu, intuitivnost a očekávání zákazníků. Dhanwani (2025) uvádí, že moderní B2B produkty jsou hodnoceny nejen podle funkcionality, ale především podle kvality uživatelské zkušenosti – a design systém je jedním z hlavních nástrojů, jak tuto kvalitu zajistit.
+% Design systém umožní
+% •	efektivní přidávání nových modulů bez ztráty konzistence
+% •	snazší přizpůsobení produktu specifickým požadavkům klientů
+% •	budování vizuální identity podporující důvěru v produkt
+% •	dlouhodobě udržitelný rozvoj bez návratu k chaotickému organickému růstu
+
+\section{Metody použitelnosti a evaluace}
+Uživatelský výzkum, testování použitelnosti, vhodné metody

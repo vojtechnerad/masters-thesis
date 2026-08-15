@@ -9,42 +9,20 @@
 %\let\openright=\cleardoublepage
 
 %%% DEFINICE ZÁKLADNÍCH PROMĚNNÝCH
-\def\TypPrace{BP}                % bakalářská práce/bachelor thesis
-%\def\TypPrace{DP}               % diplomová práce/master thesis
-\def\Jazyk{cze}                  % čeština/czech
-%\def\Jazyk{slo}                 % slovenština/slovak
-%\def\Jazyk{eng}                 % angličtina/english
+\def\TypPrace{DP}
+\def\Jazyk{cze}
+%\def\Jazyk{eng} % angličtina/english
 
 %%% Definice různých užitečných maker (viz popis uvnitř souboru)
 \input{makra}
 
-%%% Název práce v jazyce práce (přesně podle zadání)
-%%% Title of the thesis in the language used in the text (exact according to assignment)
-\def\NazevPrace{Název práce}
-
-%%% Jméno autora
-%%% Author's name - First name Surname
-\def\AutorPrace{[jméno a příjmení autora vč. již dosažených titulů}
-
-%%% Rok odevzdání a měsíc (slovně)
-%%% Year of submission and month (verbally) - month YYYY
-\def\DatumOdevzdani{měsíc RRRR}
-
-%%% Vedoucí práce: Jméno a příjmení s~tituly
-%%% Supervisor: First name and surname with titles
-\def\Vedouci{[jméno a příjmení vedoucího vč. titulů]}
-
-%%% Konzultant práce: Jméno a příjmení s~tituly
-%%% Consultant: First name and surname with titles
+\def\NazevPrace{Redesign uživatelského rozhraní aplikace pro správu pracovního prostředí}
+\def\AutorPrace{Bc. Vojtěch Nerad}
+\def\DatumOdevzdani{prosinec 2026}
+\def\Vedouci{Ing. Tereza Werdan Zichová, Ph.D.}
 \def\Konzultant{[jméno a příjmení konzultanta vč. titulů]}
-
-%%% Studijní program
-%%% Study program
-\def\StudijniProgram{[Název studijního programu]}
-
-%%% Studijní program - specializace
-%%% Study program - specialization
-\def\Specializace{[Název specializace, pokud je do nich studijní program členěn]}
+\def\StudijniProgram{Informační systémy a technologie}
+\def\Specializace{UX výzkum a design}
 
 %%% Nepovinné poděkování (vedoucímu práce, konzultantovi, tomu, kdo zapůjčil software, literaturu apod.)
 %%% Optional thanks (the supervisor, the consultant, the borrower of software, literature, etc.)
@@ -54,74 +32,82 @@ Poděkování.
 
 %%% Abstrakt (doporučený rozsah cca 150-250 slov; nejedná se o zadání práce)
 \def\Abstrakt{%
-Abstrakt.
+Diplomová práce se zabývá návrhem redesignu uživatelského rozhraní existující aplikace určené pro správu pracovního prostředí (workplace management).
+Aplikace vznikala postupně jako interní nástroj podporující provozní procesy a její vývoj se soustředil primárně na funkčnost,
+nikoliv na vizuální podobu či konzistentní uživatelskou zkušenost.
+V důsledku neřízeného vývoje se rozhraní stalo nekoherentním a pro uživatele obtížně srozumitelným.
+Cílem práce je navrhnout a ověřit nový uživatelský design, který zvýší přehlednost,
+intuitivnost a vizuální konzistenci rozhraní, a současně umožní budoucí škálování systému.
+Práce vychází z metod uživatelsky orientovaného designu a kombinuje uživatelský výzkum,
+analýzu stávajícího řešení a návrh design systému.
+Následně byly vytvořeny interaktivní prototypy, které byly iterativně testovány s uživateli.
+Výstupem je ucelený návrh redesignu klíčových obrazovek připravený k implementaci,
+design systém a doporučení pro další rozvoj aplikace.
+Tyto výstupy prokazatelně zlepšují uživatelskou zkušenost a tvoří systematický základ pro budoucí rozšiřování nástroje.
 }
-\def\AbstraktEN{%
-Abstract.
+\def\AbstraktEN{
+This master’s thesis focuses on redesigning the user interface of an existing workplace management application. The application was gradually developed as an internal tool supporting operational processes, with development focused primarily on functionality rather than visual design or a consistent user experience. As a result of this uncontrolled development, the interface became incoherent and difficult for users to understand.
+The aim of the thesis is to design and validate a new user interface that improves the clarity, intuitiveness, and visual consistency of the application while also enabling future system scalability. The work is based on user-centered design methods and combines user research, an analysis of the existing solution, and the design of a design system. Interactive prototypes were subsequently created and iteratively tested with users.
+The outcome is a comprehensive redesign of key screens, prepared for implementation, together with a design system and recommendations for the further development of the application. These outcomes demonstrably improve the user experience and provide a systematic foundation for the future expansion of the tool.
+
 }
 
 %%% 3 až 5 klíčových slov (doporučeno)
-\def\KlicovaSlova{klíčové slovo, další pojem, jiný důležitý termín, a ještě jeden}
-\def\KlicovaSlovaEN{keyword, important term, another topic, and another one}
+\def\KlicovaSlova{redesign uživatelského rozhraní, uživatelská zkušenost (UX), workplace management, uživatelský výzkum, design systém}
+\def\KlicovaSlovaEN{user interface redesign, user experience (UX), workplace management, user research, design system}
 
 %%% Titulní strana a různé povinné informativní strany
-%%% Title page and various mandatory information pages
 \begin{document}
 \include{zacatek}
 
 %%% Strana s automaticky generovaným obsahem práce
-%%% A page with automatically generated content of the thesis
 \setcounter{tocdepth}{2}
 \tableofcontents
 
 %%% Seznam obrázků v práci
-%%% List of figures in the thesis
 \openright
 \listoffigures
 Poznámka: Seznam obrázků je vhodné použít, pokud počet obrázků v textu práce je větší než 20.
 
 %%% Seznam tabulek v práci (volitelně)
-%%% List of tables in the thesis (optionally)
 \clearpage
 \listoftables
 Poznámka: Seznam tabulek je vhodný použít, pokud počet tabulek v textu práce je větší než 20.
 
 %%% Seznam zdrojových kódů v práci (volitelně)
-%%% List of source listings in the thesis (optionally)
 \clearpage
 \lstlistoflistings
 Poznámka: Seznam výpisů programového kódu je vhodné použít, pokud počet vložených objektů tohoto typu je větší než 20. 
 
 %%% Seznam zkratek v práci (volitelně)
-%%% List of abbreviations in the thesis (optionally)
 \include{zkratky}
 
 \pagestyle{fancyx}
 %%% Jednotlivé kapitoly práce jsou pro přehlednost uloženy v samostatných souborech
-%%% The individual chapters of the thesis are stored in separate files for clarity
 {%
 \pagestyle{plain}
 \include{doporuceni}
 \include{uvod}
 }
-\include{tabulky-obrazky}
-\include{prace-s-prameny}
-\include{pdf-a}
-% \include{...}
-% \include{...}
+% \include{tabulky-obrazky}
+% \include{prace-s-prameny}
+% \include{pdf-a}
+\include{chapters/2-theoretical-and-methodological-background}
+\include{chapters/3-current-application-state-analysis}
+\include{chapters/4-design-system-and-visual-identity}
+\include{chapters/5-redesign-of-selected-modules}
+\include{chapters/6-evaluation-of-the-proposed-solution}
+\include{chapters/7-recommendations-for-further-development}
 {%
 \pagestyle{plain}
 \include{zaver}
 }
 
 %%% Seznam použité literatury
-%%% Bibliography
 \include{literatura}
 
 %%% Přílohy k práci, existují-li. Každá příloha musí být alespoň jednou
 %%% odkazována z vlastního textu práce. Přílohy se číslují.
-%%% Attachments to thesis, if any. Each attachment must be referenced at 
-%%% least once in your own text. The appendices are numbered.
 \part*{\Prilohy\thispagestyle{empty}}
 \appendix
 \include{app01}
