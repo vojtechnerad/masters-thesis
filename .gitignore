@@ -29,6 +29,7 @@ _minted/
 *.xdv
 *.xmpi
 *.xmpdata
+.vscode/
 
 # Output files
 # prace.pdf
